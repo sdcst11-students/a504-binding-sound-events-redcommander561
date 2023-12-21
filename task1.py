@@ -1,6 +1,8 @@
 
 import tkinter as tk
 from playsound import playsound
+import threading
+
 
 class FartBoard:
     def __init__(self, root):
@@ -12,6 +14,8 @@ class FartBoard:
             ("perfect fart", "perfect-fart.mp3"),
             ("dry fart", "dry-fart.mp3"),
             ("reverb fart", "fart-with-reverb.mp3"),
+            ("chill fart", "09037.mp3"),
+            ("Loud fart", "fart9.mp3"),
             
         ]
 
@@ -24,7 +28,11 @@ if __name__ == "__main__":
     app = FartBoard(root)
     root.mainloop()
 
+def play_sound(self,sound_file):
+    threading.Thread(target=playsound,args=(sound_file,)).start()
 
+#button configs= very cool and easier then making individual buttons 1 by 1
 
+#john showed me what self.root does but I can not explain it
 
 
